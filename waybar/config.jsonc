@@ -2,8 +2,8 @@
     "layer": "top",
     "spacing": 16,
 
-    //"modules-left": ["cava"],
-    "modules-center":["clock", "idle_inhibitor","hyprland/workspaces","network","pulseaudio","battery"],
+    "modules-left": ["cava", "mpris", "pulseaudio"],
+    "modules-center":["clock", "idle_inhibitor","hyprland/workspaces","network","battery"],
 
     "idle_inhibitor": {
         "format": "{icon}",
@@ -77,27 +77,40 @@
         "max-length": 50
     },
     "cava": {
-        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 30,
-        "autosens": 1,
-        "sensitivity": 100,
-        "bars": 14,
+        "autosens": 0,
+        "sensitivity": 1,
+        "bars": 10,
         "lower_cutoff_freq": 50,
         "higher_cutoff_freq": 10000,
         "hide_on_silence": false,
         // "format_silent": "quiet",
-        "method": "pulse",
+        "method": "pipewire",
         "source": "auto",
         "stereo": true,
         "reverse": false,
         "bar_delimiter": 0,
         "monstercat": false,
         "waves": false,
-        "noise_reduction": 0.77,
+        "noise_reduction": 0.4,
         "input_delay": 2,
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
         "actions": {
                    "on-click-right": "mode"
                    }
+    },
+    "mpris": {
+	    "format": "{player_icon} {dynamic}",
+	    "format-paused": "{status_icon} {dynamic}",
+	    "dynamic-order": ["title", "artist"],
+	    "player-icons": {
+		    "default": "▶",
+	    },
+	    "status-icons": {
+		    "paused": "⏸"
+	    },
+	    "tooltip-format": "Left-Click: play/pause Middle-Click: prev Right-Click: next",
+	    // "ignored-players": ["firefox"]
     },
 }

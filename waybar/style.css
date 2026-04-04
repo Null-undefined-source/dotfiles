@@ -4,14 +4,14 @@
   all:unset;
   font-family:"JetBrainsMono Nerd Font Propo", Roboto, sans-serif;
 }
-/*.modules-left{
+.modules-left{
   margin-top:6px;
   margin-left:6px;
   background-color:@bg0;
   padding:8px 12px;
   border-radius:99px;
   color: @fg0;
-}*/
+}
 .modules-center{
   margin-top:6px;
   background-color:@bg0;
@@ -28,7 +28,7 @@ tooltip {
 #clock{
   font-weight:600; 
   background-color: @bg0_s;
-  padding: 4px 8px;
+  padding: 4px 16px;
   border-radius: 99px;
 }
 #idle_inhibitor{
@@ -45,18 +45,20 @@ tooltip {
 }
 #workspaces button{
   margin: 0 4px;
-  padding: 2px;
+  background-color: @bg1;
+  padding: 0px 16px;
   min-width: 16px;
   border-radius: 99px;
   transition: all .1s ease-in-out;
 }
+#workspaces button.empty{
+  background-color: unset;
+  padding: unset;
+}
 #workspaces button.active{
-  background-color: @bg1;
+  background-color: @bg2;
   padding:0 32px;
   color: @fg1;
-}
-#workspaces button.occupied{
-  background-color: @bg2;
 }
 #workspaces button:hover{
   background-color: @bg2;
@@ -73,7 +75,7 @@ tooltip {
 #battery{
   background-color: @green;
   border-radius: 99px;
-  padding: 0 8px;
+  padding: 0 16px;
 }
 #battery.warning{
   background-color: @yellow;
@@ -87,9 +89,17 @@ tooltip {
 #network{
   min-width:64px;
   background-color: @bg0_s;
-  padding: 0 8px;
+  padding: 4px 16px;
   border-radius: 99px;
 }
 #network.disconnected{
   background-color: @red;
+}
+#cava{
+  margin-left: 8px;
+}
+#mpris{
+  background-color: @bg0_s; 
+  padding: 4px 16px;
+  border-radius: 99px;
 }

@@ -1,0 +1,56 @@
+@import "gruvbox-color.css";
+
+*{
+	all: unset;
+}
+window {
+	font-family: "JetBrains Mono Nerd Font Propo";
+	font-size: 12pt;
+	color: #cdd6f4;
+	background-color: @bg0;
+	
+}
+
+button {
+	background-repeat: no-repeat;
+	background-position: center;
+	border: unset;
+	background-size: 10%;
+	background-color: @bg1;
+	color: @fg1;
+	margin: 5px;
+	border-radius: 99px;
+	transition: all 0.3s ease-in-out;
+	min-width: 128px;
+}
+
+button:hover{
+	background-color: @blue;
+	color: @bg0;
+	min-width: 256px;
+	background-size: 15%;
+}
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
+

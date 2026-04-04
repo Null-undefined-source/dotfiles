@@ -1,0 +1,95 @@
+@import "gruvbox-color.css";
+
+*{
+  all:unset;
+  font-family:"JetBrainsMono Nerd Font Propo", Roboto, sans-serif;
+}
+/*.modules-left{
+  margin-top:6px;
+  margin-left:6px;
+  background-color:@bg0;
+  padding:8px 12px;
+  border-radius:99px;
+  color: @fg0;
+}*/
+.modules-center{
+  margin-top:6px;
+  background-color:@bg0;
+  padding:8px 12px;
+  border-radius:99px;
+  color: @fg0;
+}
+tooltip {
+  background-color: @bg0;
+  border-radius: 99px;
+  color: @fg0;
+  border: 2px solid gray;
+}
+#clock{
+  font-weight:600; 
+  background-color: @bg0_s;
+  padding: 4px 8px;
+  border-radius: 99px;
+}
+#idle_inhibitor{
+  background-color: @bg0_s;
+  padding: 4px 28px;
+  border-radius: 99px;
+}
+#idle_inhibitor.activated{
+  background-color: @green;
+}
+#workspaces{
+  /* background-color: @bg0_s;
+  padding:4px 0; */
+}
+#workspaces button{
+  margin: 0 4px;
+  padding: 2px;
+  min-width: 16px;
+  border-radius: 99px;
+  transition: all .1s ease-in-out;
+}
+#workspaces button.active{
+  background-color: @bg1;
+  padding:0 32px;
+  color: @fg1;
+}
+#workspaces button.occupied{
+  background-color: @bg2;
+}
+#workspaces button:hover{
+  background-color: @bg2;
+}
+#pulseaudio{
+  background-color: @bg0_s;
+  border-radius: 99px;
+  padding: 4px 8px;
+  min-width: 64px;
+}
+#pulseaudio.muted{
+  background-color: @red;
+}
+#battery{
+  background-color: @green;
+  border-radius: 99px;
+  padding: 0 8px;
+}
+#battery.warning{
+  background-color: @yellow;
+}
+#battery.critical{
+  background-color: @red;
+}
+#battery.charging{
+  background-color: @purple;
+}
+#network{
+  min-width:64px;
+  background-color: @bg0_s;
+  padding: 0 8px;
+  border-radius: 99px;
+}
+#network.disconnected{
+  background-color: @red;
+}

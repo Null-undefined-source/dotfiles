@@ -1,0 +1,103 @@
+{
+    "layer": "top",
+    "spacing": 16,
+
+    //"modules-left": ["cava"],
+    "modules-center":["clock", "idle_inhibitor","hyprland/workspaces","network","pulseaudio","battery"],
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "battery": {
+        "format": "{capacity}%",// {icon}",
+        "states":{
+            "warning" : 30,
+            "critical" : 20,
+        },
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format-alt": "{:%a, %d %b  %H:%M}",
+        "tooltip": false,
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "on-click-right": "amixer set Master toggle",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "hyprland/workspaces": {
+	    "format": "{name}", //: {icon}",
+	    //    "format-icons": {
+		//        "1": "",
+		//        "2": "",
+		//        "3": "",
+		//        "4": "",
+		//        "5": "",
+		//        "active": "",
+		//        "default": ""
+	    //    },
+        "persistent-workspaces": {
+            "eDP-1": 5, // 5 workspaces by default on every monitor
+        },
+        "cursor":true,
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} {icon}",
+        "format-icons": [
+            "󰤯","󰤟","󰤢","󰤥","󰤨",
+        ],
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "󰤮", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) {icon}",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty  nmtui connect",
+        "on-click-right": "exec ./scripts/togglenetwok.sh",
+        "max-length": 50
+    },
+    "cava": {
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "hide_on_silence": false,
+        // "format_silent": "quiet",
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
+}

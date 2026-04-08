@@ -10,3 +10,5 @@ rofi<br>
 swaync <br>
 waybar-cava<br>
 wlogout<br>
+zen-browser<br>
+pulseaudio<br>

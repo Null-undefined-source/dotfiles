@@ -72,8 +72,7 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%) {icon}",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "kitty  nmtui connect",
-        "on-click-right": "exec ./scripts/togglenetwok.sh",
+        "on-click": "nm-connection-editor",
         "max-length": 50
     },
     "cava": {

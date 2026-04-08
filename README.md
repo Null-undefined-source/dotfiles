@@ -2,6 +2,7 @@
 The dotfiles that i made
 
 <h2>Applications</h2>
+This uses jakoolit for the applications<br>
 hyprland <br>
 hyprshade<br>
 kitty<br>

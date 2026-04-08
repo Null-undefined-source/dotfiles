@@ -72,7 +72,8 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%) {icon}",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "nm-connection-editor",
+        "on-click": "kitty -e nmtui",
+        "on-click-right": "blueman-manager", 
         "max-length": 50
     },
     "cava": {
